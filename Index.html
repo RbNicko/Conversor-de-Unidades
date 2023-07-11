@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h3 id="Título">Conversor de Unidades</h3>
+    <h2 id="subtitulo">Seleccione la Unidad a Convertir</h2>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css" />
+
+</head>
+<body>
+    <div class="contenedor">
+        <a href="#" class="btn btn-1" data-target="#seccion1">Moneda</a>
+        <a href="#" class="btn btn-2" data-target="#seccion2">Temperatura
+            <span></span>
+            <span></span>
+        </a>
+        <a href="#" class="btn btn-3" data-target="#seccion3">Medida</a>
+    </div>
+
+    <div id="seccion1" class="seccion">
+        <div class="conversor-container">
+          <table class="conversor-table">
+            <tr>
+              <td colspan="2" class="titulo">Conversor de Monedas</td>
+            </tr>
+            <tr>
+              <td>
+                <label for="monedaOrigen">Seleccione la moneda a convertir:</label>
+                <select id="monedaOrigen">
+                  <option value="mxn">MXN (Pesos mexicanos)</option>
+                  <option value="usd">USD (Dólares)</option>
+                  <option value="eur">EUR (Euros)</option>
+                  <option value="jpy">JPY (Yenes)</option>
+                </select>
+              </td>
+              <td>
+                <label for="monedaDestino">Convertir a:</label>
+                <select id="monedaDestino">
+                  <option value="mxn">MXN (Pesos mexicanos)</option>
+                  <option value="usd">USD (Dólares)</option>
+                  <option value="eur">EUR (Euros)</option>
+                  <option value="jpy">JPY (Yenes)</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="center">
+                <button id="btnConvertir" type="button">Convertir</button>
+              </td>
+            </tr>
+          </table>
+          <div id="resultado"></div>
+        </div>
+      </div>
+      
+            <h1 id="Como-usar">Seleccione la moneda de Origen y la moneda de Destino, asegurese de introducir caracteres numéricos y luego haga click en "Convertir"</h1>
+              
+     
+
+        </div>
+    </div>
+
+    <div id="seccion2" class="seccion">
+        <div class="conversor-container">
+          <table class="conversor-table2">
+            <tr>
+              <td colspan="2" class="titulo">Conversor de Grados</td>
+            </tr>
+            <tr>
+              <td>
+                <label for="gradoOrigen">Seleccione el grado a convertir:</label>
+                <select id="gradoOrigen">
+                  <option value="celsius">Celsius</option>
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                </select>
+              </td>
+              <td>
+                <label for="gradoDestino">Convertir a:</label>
+                <select id="gradoDestino">
+                  <option value="celsius">Celsius</option>
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="center">
+                <button id="btnConvertir2" type="button">Convertir</button>
+              </td>
+            </tr>
+          </table>
+          <div id="resultado"></div>
+        </div>
+      </div>
+      
+        
+    </div>
+    <h1 id="Como-usar2">Seleccione la Temperatura de Origen y la Temperatura de Destino, asegurese de introducir caracteres numéricos y luego haga click en "Convertir"</h1>
+
+    <div id="seccion3" class="seccion">
+        <div class="conversor-container">
+          <table class="conversor-table3">
+            <tr>
+              <td colspan="2" class="titulo">Conversor de Unidades de Medida</td>
+            </tr>
+            <tr>
+              <td>
+                <label for="unidadOrigen">Seleccione la unidad a convertir:</label>
+                <select id="unidadOrigen">
+                  <option value="metros">Metros</option>
+                  <option value="pies">Pies</option>
+                  <option value="centimetros">Centímetros</option>
+                </select>
+              </td>
+              <td>
+                <label for="unidadDestino">Convertir a:</label>
+                <select id="unidadDestino">
+                  <option value="metros">Metros</option>
+                  <option value="pies">Pies</option>
+                  <option value="centimetros">Centímetros</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="valor">Valor:</label>
+                <input type="number" id="valor" required>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="center">
+                <button id="btnConvertir-3" type="button">Convertir</button>
+              </td>
+            </tr>
+          </table>
+          <div id="resultado"></div>
+        </div>     
+    </div>
+
+      <h1 id="como-usar3">Seleccione la Medida de Origen y la Medida de Destino, asegurese de introducir caracteres numéricos y luego haga click en "Convertir"</h1>
+    <script src="script.js"></script>
+
+    <button id="btnVolverArriba" class="btn-volver-arriba" title="Volver Arriba">
+      <span>&uarr;</span>
+    </button>
+    
+</body>
+</html>
